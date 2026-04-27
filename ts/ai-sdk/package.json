@@ -1,0 +1,38 @@
+{
+  "name": "@ledgermem/ai-sdk",
+  "version": "0.1.0",
+  "description": "Vercel AI SDK helpers for LedgerMem Memory — exposes memory_search and memory_add as Vercel AI SDK tools.",
+  "type": "module",
+  "license": "MIT",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js",
+      "require": "./dist/index.cjs"
+    }
+  },
+  "files": ["dist", "README.md"],
+  "engines": { "node": ">=18" },
+  "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts --sourcemap --clean",
+    "test": "echo 'no tests yet'",
+    "typecheck": "tsc --noEmit"
+  },
+  "peerDependencies": {
+    "ai": ">=4.0.0",
+    "@ledgermem/memory": ">=0.1.0",
+    "zod": ">=3.23.0"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "ai": "^4.0.0",
+    "@ledgermem/memory": "^0.1.0",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "zod": "^3.23.8"
+  },
+  "publishConfig": { "access": "public" }
+}

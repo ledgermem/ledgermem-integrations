@@ -1,0 +1,35 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "langchain-ledgermem"
+version = "0.1.0"
+description = "LangChain + LangGraph integration for LedgerMem Memory."
+readme = "README.md"
+license = { text = "MIT" }
+requires-python = ">=3.10"
+authors = [{ name = "LedgerMem", email = "founders@proofly.dev" }]
+keywords = ["langchain", "langgraph", "ledgermem", "memory", "llm", "agents"]
+classifiers = [
+  "Development Status :: 3 - Alpha",
+  "License :: OSI Approved :: MIT License",
+  "Programming Language :: Python :: 3.10",
+  "Programming Language :: Python :: 3.11",
+  "Programming Language :: Python :: 3.12",
+  "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+  "ledgermem>=0.1.0,<1.0",
+  "langchain-core>=0.3,<1.0",
+]
+
+[project.optional-dependencies]
+dev = ["pytest>=8.0", "ruff>=0.6", "mypy>=1.11"]
+
+[project.urls]
+Homepage = "https://proofly.dev"
+Repository = "https://github.com/ledgermem/ledgermem-integrations"
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/langchain_ledgermem"]
