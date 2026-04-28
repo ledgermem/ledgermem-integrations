@@ -7,6 +7,8 @@ local embedding/index orchestration LlamaIndex assumes for VectorStores.
 
 from __future__ import annotations
 
+from typing import Any
+
 from llama_index.core.callbacks import CallbackManager
 from llama_index.core.retrievers import BaseRetriever
 from llama_index.core.schema import NodeWithScore, QueryBundle, TextNode
@@ -30,7 +32,7 @@ class LedgerMemRetriever(BaseRetriever):
         super().__init__(callback_manager=callback_manager)
 
     def _retrieve(self, query_bundle: QueryBundle) -> list[NodeWithScore]:
-        kwargs = {"limit": self._top_k}
+        kwargs: dict[str, Any] = {"limit": self._top_k}
         if self._actor_id:
             kwargs["actor_id"] = self._actor_id
         res = self._client.search(query_bundle.query_str, **kwargs)
