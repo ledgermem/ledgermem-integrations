@@ -1,4 +1,4 @@
-"""LangChain BaseRetriever implementation backed by LedgerMem."""
+"""LangChain BaseRetriever implementation backed by Mnemo."""
 
 from __future__ import annotations
 
@@ -7,23 +7,23 @@ from typing import Any
 from langchain_core.callbacks import CallbackManagerForRetrieverRun
 from langchain_core.documents import Document
 from langchain_core.retrievers import BaseRetriever
-from ledgermem import LedgerMem
+from getmnemo import Mnemo
 
 
-class LedgerMemRetriever(BaseRetriever):
+class MnemoRetriever(BaseRetriever):
     """Drop-in retriever for any LangChain chain or LangGraph node.
 
     Example:
-        from langchain_ledgermem import LedgerMemRetriever
+        from langchain_getmnemo import MnemoRetriever
 
-        retriever = LedgerMemRetriever(
-            client=LedgerMem(api_key="...", workspace_id="..."),
+        retriever = MnemoRetriever(
+            client=Mnemo(api_key="...", workspace_id="..."),
             k=8,
         )
         docs = retriever.invoke("what does the user prefer for breakfast?")
     """
 
-    client: LedgerMem
+    client: Mnemo
     k: int = 8
     actor_id: str | None = None
 

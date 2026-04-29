@@ -1,8 +1,8 @@
 {
-  "name": "ledgermem-integrations",
+  "name": "getmnemo-integrations",
   "version": "0.1.0",
   "private": true,
-  "description": "Monorepo of LedgerMem helper packages for popular agent frameworks (LangChain, LlamaIndex, Vercel AI SDK, AutoGen, CrewAI, PydanticAI, Semantic Kernel).",
+  "description": "Monorepo of Mnemo helper packages for popular agent frameworks (LangChain, LlamaIndex, Vercel AI SDK, AutoGen, CrewAI, PydanticAI, Semantic Kernel).",
   "license": "MIT",
   "workspaces": [
     "ts/*"

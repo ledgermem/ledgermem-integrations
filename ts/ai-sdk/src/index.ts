@@ -1,14 +1,14 @@
 /**
- * Vercel AI SDK helpers for LedgerMem Memory.
+ * Vercel AI SDK helpers for Mnemo Memory.
  *
  * @example
  * ```ts
  * import { generateText } from 'ai'
  * import { openai } from '@ai-sdk/openai'
- * import { LedgerMem } from '@ledgermem/memory'
- * import { memoryTools } from '@ledgermem/ai-sdk'
+ * import { Mnemo } from '@getmnemo/memory'
+ * import { memoryTools } from '@getmnemo/ai-sdk'
  *
- * const memory = new LedgerMem({ apiKey: '...', workspaceId: '...' })
+ * const memory = new Mnemo({ apiKey: '...', workspaceId: '...' })
  *
  * await generateText({
  *   model: openai('gpt-4.1-mini'),
@@ -18,7 +18,7 @@
  * ```
  */
 
-import type { LedgerMem } from '@ledgermem/memory'
+import type { Mnemo } from '@getmnemo/memory'
 import { tool, type Tool } from 'ai'
 import { z } from 'zod'
 
@@ -27,7 +27,7 @@ export type MemoryToolset = {
   memory_add: Tool
 }
 
-export function memoryTools(memory: LedgerMem): MemoryToolset {
+export function memoryTools(memory: Mnemo): MemoryToolset {
   return {
     memory_search: tool({
       description:

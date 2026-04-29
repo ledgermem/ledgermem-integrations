@@ -1,6 +1,6 @@
-"""LlamaIndex retriever backed by LedgerMem.
+"""LlamaIndex retriever backed by Mnemo.
 
-We expose a `BaseRetriever` rather than a full VectorStore because LedgerMem
+We expose a `BaseRetriever` rather than a full VectorStore because Mnemo
 already runs hybrid 7-strategy retrieval server-side — we don't need the
 local embedding/index orchestration LlamaIndex assumes for VectorStores.
 """
@@ -12,15 +12,15 @@ from typing import Any
 from llama_index.core.callbacks import CallbackManager
 from llama_index.core.retrievers import BaseRetriever
 from llama_index.core.schema import NodeWithScore, QueryBundle, TextNode
-from ledgermem import LedgerMem
+from getmnemo import Mnemo
 
 
-class LedgerMemRetriever(BaseRetriever):
-    """LlamaIndex retriever that delegates to LedgerMem search."""
+class MnemoRetriever(BaseRetriever):
+    """LlamaIndex retriever that delegates to Mnemo search."""
 
     def __init__(
         self,
-        client: LedgerMem,
+        client: Mnemo,
         *,
         similarity_top_k: int = 8,
         actor_id: str | None = None,
@@ -53,5 +53,5 @@ class LedgerMemRetriever(BaseRetriever):
         ]
 
 
-__all__ = ["LedgerMemRetriever"]
+__all__ = ["MnemoRetriever"]
 __version__ = "0.1.0"

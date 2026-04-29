@@ -24,11 +24,11 @@ jobs:
     strategy:
       matrix:
         package:
-          - python/langchain-ledgermem
-          - python/llama-index-vector-stores-ledgermem
-          - python/ledgermem-autogen
-          - python/ledgermem-crewai
-          - python/ledgermem-pydantic-ai
+          - python/langchain-getmnemo
+          - python/llama-index-vector-stores-getmnemo
+          - python/getmnemo-autogen
+          - python/getmnemo-crewai
+          - python/getmnemo-pydantic-ai
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-python@v5

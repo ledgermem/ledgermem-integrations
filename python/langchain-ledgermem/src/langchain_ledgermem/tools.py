@@ -10,7 +10,7 @@ from __future__ import annotations
 from typing import Any
 
 from langchain_core.tools import StructuredTool
-from ledgermem import LedgerMem
+from getmnemo import Mnemo
 from pydantic import BaseModel, Field
 
 
@@ -27,7 +27,7 @@ class _AddArgs(BaseModel):
     )
 
 
-def build_memory_tools(client: LedgerMem) -> list[StructuredTool]:
+def build_memory_tools(client: Mnemo) -> list[StructuredTool]:
     """Return [search_tool, add_tool] bound to the given client."""
 
     def _search(query: str, limit: int = 8) -> list[dict[str, Any]]:

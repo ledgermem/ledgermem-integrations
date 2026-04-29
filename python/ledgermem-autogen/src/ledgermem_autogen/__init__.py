@@ -1,16 +1,16 @@
-"""AutoGen FunctionTool wrappers for LedgerMem Memory."""
+"""AutoGen FunctionTool wrappers for Mnemo Memory."""
 
 from __future__ import annotations
 
 from typing import Any
 
 from autogen_core.tools import FunctionTool
-from ledgermem import LedgerMem
+from getmnemo import Mnemo
 
 __version__ = "0.1.0"
 
 
-def build_memory_tools(client: LedgerMem) -> list[FunctionTool]:
+def build_memory_tools(client: Mnemo) -> list[FunctionTool]:
     """Return [search_tool, add_tool] as AutoGen FunctionTools."""
 
     async def memory_search(query: str, limit: int = 8) -> list[dict[str, Any]]:

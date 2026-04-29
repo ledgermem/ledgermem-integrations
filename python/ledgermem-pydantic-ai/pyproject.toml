@@ -3,19 +3,19 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ledgermem-pydantic-ai"
+name = "getmnemo-pydantic-ai"
 version = "0.1.0"
-description = "Pydantic AI Tool wrappers for LedgerMem Memory."
+description = "Pydantic AI Tool wrappers for Mnemo Memory."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = [
-  "ledgermem>=0.1.0,<1.0",
+  "getmnemo>=0.1.0,<1.0",
   "pydantic-ai>=0.0.13,<1.0",
 ]
 
 [project.urls]
-Homepage = "https://proofly.dev"
+Homepage = "https://getmnemo.xyz"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/ledgermem_pydantic_ai"]
+packages = ["src/getmnemo_pydantic_ai"]

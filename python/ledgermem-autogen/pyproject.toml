@@ -3,19 +3,19 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ledgermem-autogen"
+name = "getmnemo-autogen"
 version = "0.1.0"
-description = "AutoGen v0.4+ FunctionTool wrappers for LedgerMem Memory."
+description = "AutoGen v0.4+ FunctionTool wrappers for Mnemo Memory."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
 dependencies = [
-  "ledgermem>=0.1.0,<1.0",
+  "getmnemo>=0.1.0,<1.0",
   "autogen-core>=0.4,<1.0",
 ]
 
 [project.urls]
-Homepage = "https://proofly.dev"
+Homepage = "https://getmnemo.xyz"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/ledgermem_autogen"]
+packages = ["src/getmnemo_autogen"]

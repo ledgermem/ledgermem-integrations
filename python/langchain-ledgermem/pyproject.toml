@@ -3,14 +3,14 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "langchain-ledgermem"
+name = "langchain-getmnemo"
 version = "0.1.0"
-description = "LangChain + LangGraph integration for LedgerMem Memory."
+description = "LangChain + LangGraph integration for Mnemo Memory."
 readme = "README.md"
 license = { text = "MIT" }
 requires-python = ">=3.10"
-authors = [{ name = "LedgerMem", email = "founders@proofly.dev" }]
-keywords = ["langchain", "langgraph", "ledgermem", "memory", "llm", "agents"]
+authors = [{ name = "Mnemo", email = "founders@getmnemo.xyz" }]
+keywords = ["langchain", "langgraph", "getmnemo", "memory", "llm", "agents"]
 classifiers = [
   "Development Status :: 3 - Alpha",
   "License :: OSI Approved :: MIT License",
@@ -20,7 +20,7 @@ classifiers = [
   "Topic :: Software Development :: Libraries :: Python Modules",
 ]
 dependencies = [
-  "ledgermem>=0.1.0,<1.0",
+  "getmnemo>=0.1.0,<1.0",
   "langchain-core>=0.3,<1.0",
 ]
 
@@ -28,8 +28,8 @@ dependencies = [
 dev = ["pytest>=8.0", "ruff>=0.6", "mypy>=1.11"]
 
 [project.urls]
-Homepage = "https://proofly.dev"
-Repository = "https://github.com/ledgermem/ledgermem-integrations"
+Homepage = "https://getmnemo.xyz"
+Repository = "https://github.com/getmnemo/getmnemo-integrations"
 
 [tool.hatch.build.targets.wheel]
-packages = ["src/langchain_ledgermem"]
+packages = ["src/langchain_getmnemo"]
