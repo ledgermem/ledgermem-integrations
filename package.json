@@ -1,5 +1,5 @@
 {
-  "name": "getmnemo-integrations",
+  "name": "mnemo-integrations",
   "version": "0.1.0",
   "private": true,
   "description": "Monorepo of Mnemo helper packages for popular agent frameworks (LangChain, LlamaIndex, Vercel AI SDK, AutoGen, CrewAI, PydanticAI, Semantic Kernel).",

@@ -5,8 +5,8 @@
  * ```ts
  * import { generateText } from 'ai'
  * import { openai } from '@ai-sdk/openai'
- * import { Mnemo } from '@getmnemo/memory'
- * import { memoryTools } from '@getmnemo/ai-sdk'
+ * import { Mnemo } from '@mnemo/memory'
+ * import { memoryTools } from '@mnemo/ai-sdk'
  *
  * const memory = new Mnemo({ apiKey: '...', workspaceId: '...' })
  *
@@ -18,7 +18,7 @@
  * ```
  */
 
-import type { Mnemo } from '@getmnemo/memory'
+import type { Mnemo } from '@mnemo/memory'
 import { tool, type Tool } from 'ai'
 import { z } from 'zod'
 

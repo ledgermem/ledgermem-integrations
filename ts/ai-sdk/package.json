@@ -1,5 +1,5 @@
 {
-  "name": "@getmnemo/ai-sdk",
+  "name": "@mnemo/ai-sdk",
   "version": "0.1.0",
   "description": "Vercel AI SDK helpers for Mnemo Memory — exposes memory_search and memory_add as Vercel AI SDK tools.",
   "type": "module",
@@ -23,13 +23,13 @@
   },
   "peerDependencies": {
     "ai": ">=4.0.0",
-    "@getmnemo/memory": ">=0.1.0",
+    "@mnemo/memory": ">=0.1.0",
     "zod": ">=3.23.0"
   },
   "devDependencies": {
     "@types/node": "^22.10.0",
     "ai": "^4.0.0",
-    "@getmnemo/memory": "^0.1.0",
+    "@mnemo/memory": "^0.1.0",
     "tsup": "^8.3.5",
     "typescript": "^5.7.2",
     "zod": "^3.23.8"
